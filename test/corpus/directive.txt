@@ -1,0 +1,23 @@
+================================================================================
+directive
+================================================================================
+.fill
+
+label1:
+    MOV R0, #42     ;dcomment2   
+    mov r0, #1234   ;sada      
+--------------------------------------------------------------------------------
+(program
+  (directive)
+  (label
+    (identifier))
+  (instruction
+    (identifier)
+    (identifier)
+    (int))
+  (comment)
+  (instruction
+    (identifier)
+    (identifier)
+    (int))
+  (comment))
