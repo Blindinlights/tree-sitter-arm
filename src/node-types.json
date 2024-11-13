@@ -1,5 +1,10 @@
 [
   {
+    "type": "directive",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "instruction",
     "named": true,
     "fields": {
@@ -26,11 +31,11 @@
             "named": true
           },
           {
-            "type": "identifier",
+            "type": "int",
             "named": true
           },
           {
-            "type": "int",
+            "type": "regs",
             "named": true
           },
           {
@@ -90,6 +95,29 @@
     }
   },
   {
+    "type": "regs",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
     "type": "#",
     "named": false
   },
@@ -102,11 +130,15 @@
     "named": false
   },
   {
-    "type": "comment",
-    "named": true
+    "type": "[",
+    "named": false
   },
   {
-    "type": "directive",
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "comment",
     "named": true
   },
   {
@@ -120,5 +152,13 @@
   {
     "type": "string",
     "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
   }
 ]

@@ -21,8 +21,16 @@ module.exports = grammar({
       $.int,
       $.float,
       $.string,
-      $.identifier,
+      $.regs,
     ),
+    regs: $ => choice(
+      $.identifier,
+      seq("{", seq($.identifier, repeat(seq(",", $.identifier)), "}"),),
+      seq("[", $.identifier, optional(seq(",",$.int)),"]"),
+      seq($.identifier, "!")
+    ),
+
+
     directive: ($) => seq(token(/[.][0-9a-zA-Z]+/)),
 
     label: ($) => seq($.identifier, ":"),

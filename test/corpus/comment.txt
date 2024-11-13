@@ -6,15 +6,17 @@ label1:
     mov r0, #1234   ;sada      
 --------------------------------------------------------------------------------
 (program
-      (label
-        (identifier))
-      (instruction
-        (identifier)
-        (identifier)
-        (int))
-      (comment)
-      (instruction
-        (identifier)
-        (identifier)
-        (int))
-      (comment))
+  (label
+    (identifier))
+  (instruction
+    (identifier)
+    (regs
+      (identifier))
+    (int))
+  (comment)
+  (instruction
+    (identifier)
+    (regs
+      (identifier))
+    (int))
+  (comment))
